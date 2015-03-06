@@ -28,6 +28,10 @@ var analyzed = require ('./routes/analyzed');
 var task = require('./routes/task');
 var history = require('./routes/history');
 var taskHistory = require('./routes/taskHistory');
+var analysis_alternate = require('./routes/analysis_alternate');
+var stress_levels = require('./routes/stress_levels');
+var productivity_levels = require('./routes/productivity_levels');
+var mood_levels = require('./routes/mood_levels');
 //var analyzed = require ('./public/js/plugins/morris/morris-data.js');
 
 
@@ -88,6 +92,10 @@ app.get('/signinpage', signout.signout);
 app.get('/help', help.getHelp);
 app.get('/analysis', analysis.getAnalysis);
 app.get('/analyzed', analyzed.analyze);
+app.get('/analysis_alternate', analysis_alternate.View);
+app.get('/stress-levels', stress_levels.getStress);
+app.get('/product-levels', productivity_levels.getProduct);
+app.get('/mood-levels', mood_levels.getMood);
 
 // Example route
 // app.get('/users', user.list);
